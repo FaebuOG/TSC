@@ -9,6 +9,7 @@ public class InventoryTest : MonoBehaviour
 
     public List<CardSlot> Slots => slots;
 
+    // Player gets inventory
     public static InventoryTest GetInventory()
     {
         return FindObjectOfType<TestingPlayer>().GetComponent<InventoryTest>();
@@ -32,6 +33,7 @@ public class InventoryTest : MonoBehaviour
         }
     }
 }
+
 [Serializable]
 public class CardSlot
 {
