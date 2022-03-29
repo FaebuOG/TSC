@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b7ade1ccbf8e4a408a22a0ca4315efa, type: 3}
   m_Name: defaultCard3
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 5607560871160545050, guid: 09e6d552f69cb474fb48a4b4c05b1b70, type: 3}
   type: 1
   description: 
   attackPoints: 0

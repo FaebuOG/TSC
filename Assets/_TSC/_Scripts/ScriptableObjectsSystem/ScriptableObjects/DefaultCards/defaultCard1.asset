@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b7ade1ccbf8e4a408a22a0ca4315efa, type: 3}
   m_Name: defaultCard1
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 5607560871160545050, guid: f3dcab4a21a644a758f4ff56fae1975b, type: 3}
   type: 1
-  description: You can equip on each pole, the whole pole with players.
+  description: samurai
   attackPoints: 50
   healthPoints: 150

@@ -8,6 +8,6 @@ public class ResourceObject : ItemObject
     public int resourceAmount;
     private void Awake()
     {
-        type = ItemType.Money;
+        type = ItemType.Resource;
     }
 }
