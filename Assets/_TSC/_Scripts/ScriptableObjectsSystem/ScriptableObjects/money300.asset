@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 757a319075af64d439144460a40aacc0, type: 3}
+  m_Name: money300
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 5607560871160545050, guid: d4c6ab7437eda46b78ebac2d8e56285d, type: 3}
+  type: 0
+  description: Ein kleiner haufen Geld.
+  moneyValue: 300

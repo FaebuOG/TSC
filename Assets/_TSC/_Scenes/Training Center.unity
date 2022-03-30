@@ -2299,7 +2299,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 662104799}
-  m_LocalRotation: {x: -0.0000000041592374, y: 0.9763476, z: -0.21620676, w: -0.000000018782309}
+  m_LocalRotation: {x: 0.0000000041592374, y: 0.9763476, z: -0.21620676, w: 0.000000018782309}
   m_LocalPosition: {x: -0.3456396, y: 0.4361034, z: 0.14357889}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -6199,7 +6199,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6956521, y: 1}
+    m_SensorSize: {x: 2.1453831, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -6215,7 +6215,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841743767}
-  m_LocalRotation: {x: -0.0000000041592374, y: 0.9763476, z: -0.21620676, w: -0.000000018782309}
+  m_LocalRotation: {x: 0.0000000041592374, y: 0.9763476, z: -0.21620676, w: 0.000000018782309}
   m_LocalPosition: {x: -0.3456396, y: 0.4361034, z: 0.14357889}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6275,9 +6275,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1947145488696974806, guid: ffe271e47644aa944a65986a5c1e285a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1947145488696995822, guid: ffe271e47644aa944a65986a5c1e285a, type: 3}
       propertyPath: m_Name
       value: SpecialCard_FireTornado Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947145488697047330, guid: ffe271e47644aa944a65986a5c1e285a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1947145488697245676, guid: ffe271e47644aa944a65986a5c1e285a, type: 3}
       propertyPath: m_RootOrder
