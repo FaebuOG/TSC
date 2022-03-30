@@ -6,6 +6,7 @@ using UnityEngine;
 public class MoneyObject : ItemObject
 {
     public int moneyValue;
+   
     private void Awake()
     {
         type = ItemType.Money;

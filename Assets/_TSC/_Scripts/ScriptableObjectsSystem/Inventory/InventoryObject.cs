@@ -13,6 +13,7 @@ public class InventoryObject : ScriptableObject
         bool hasItem = false;
         for (int i = 0; i < Container.Count; i++)
         {
+            // TODO: Abfragen welchen item typ das item ist und in eine andere Liste stecken.
             if (Container[i].item == _item)
             {
                 Container[i].AddAmount(_amount);
@@ -21,10 +22,10 @@ public class InventoryObject : ScriptableObject
                 break;
             }
 
-            if (!hasItem)
-            {
-                Container.Add(new InventorySlot(_item, _amount));
-            }
+           //if (!hasItem)
+           //{
+           //    Container.Add(new InventorySlot(_item, _amount));
+           //}
            
         }
     }
