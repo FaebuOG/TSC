@@ -77,18 +77,17 @@ public class UserInterfaceOverworld : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(firstButtonPauseMenu);
         }
     }
-
     #region open/close Pausemenu
+    
+    // Pause and resume the game
     void Pause()
     {
         canvasPauseMenu.SetActive(true);
         gamePaused = true;
         Time.timeScale = 0f;
     }
-
     public void Resume()
     {
-        
         canvasPauseMenu.SetActive(false);
         canvasInventory.SetActive(false);
         canvasDialoge.SetActive(false);
@@ -125,18 +124,15 @@ public class UserInterfaceOverworld : MonoBehaviour
     }
     #endregion
     
-   
-
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(1);
     }
-   
-
-    #region L1/R1 Navigation System 
-
+    
+    #region L1/R1 Navigation System
     void SwitchInventoryPanels()
     {
+        // Gets the input from controller to switch the inventory panels
         var gamepad = Gamepad.current;
         if (gamepad.rightShoulder.wasPressedThisFrame)
         {
@@ -150,10 +146,10 @@ public class UserInterfaceOverworld : MonoBehaviour
             if (currentPanel > 1)
             {
                 currentPanel -= 1;
-                
             }
         }
-
+        
+        // Updates the current showed panel in the inventory
         switch (currentPanel)
         {
             case 1:
@@ -177,9 +173,7 @@ public class UserInterfaceOverworld : MonoBehaviour
                 panelPoles.SetActive(true);
                 EventSystem.current.SetSelectedGameObject(firstButtonPoles);
                 break;
-
         }
-
     }
     #endregion
 
@@ -204,7 +198,6 @@ public class UserInterfaceOverworld : MonoBehaviour
         panelCards2.SetActive(false);
         panelCards3.SetActive(true);
     }
-
     #endregion
 }
 

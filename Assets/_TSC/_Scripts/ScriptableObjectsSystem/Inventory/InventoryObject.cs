@@ -10,10 +10,11 @@ using UnityEditor;
 public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
 {
     
-    
+    [Header("Currency")]
     public int money;
+    
+    [Header("References")]
     public string savePath;
-
     private ItemDatabaseObject database;
     
     
@@ -21,6 +22,9 @@ public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
     // Adds an item to it
     public List<InventorySlot> Container = new List<InventorySlot>();
 
+    
+    // checks if unity editor is runned. 
+    // when the project is builded the "else" part will take over.
     #if UNITY_EDITOR
     private void OnEnable()
     {
@@ -31,7 +35,7 @@ public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
     }
 
 
-    #region Methods -> Add item, currency to inventory
+    #region Methods -> Add item and currency to inventory
     public void AddItem(ItemObject _item, int _amount)
     {
         for (int i = 0; i < Container.Count; i++)
@@ -53,6 +57,7 @@ public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
     #endregion
 
 
+    // Methods to save the inventory
     public void Save()
     {
         string saveData = JsonUtility.ToJson(this, true);
@@ -61,7 +66,6 @@ public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
         bf.Serialize(file, saveData);
         file.Close();
     }
-
     public void Load()
     {
         if(File.Exists(String.Concat(Application.persistentDataPath, savePath)))
@@ -72,6 +76,7 @@ public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
             file.Close();
         }
     }
+    
     
     public void OnBeforeSerialize()
     {

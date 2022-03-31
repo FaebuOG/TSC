@@ -12,25 +12,14 @@ public class SpawnBallManager : MonoBehaviour
 
     private Vector3 spawnPoint = new Vector3(0f, 0.3402f, -0.743f);
     
-
     private void Awake()
     {
         if (Instance == null)
             Instance = this;
-
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void SpawnBall()
     {
-        
-        
         if (ballInGame == true)
         {
             Destroy(GameObject.FindGameObjectWithTag("Ball"));

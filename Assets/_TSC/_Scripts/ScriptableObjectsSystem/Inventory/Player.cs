@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
    {
        var item = other.GetComponent<Item>();
 
+       // Checks which type the new item is and adds it to its inventory
        if (item.item.type == ItemType.DefaultCard)
        {
            Debug.Log("DefaultCard");
@@ -32,19 +33,19 @@ public class Player : MonoBehaviour
 
    private void Update()
    {
+       // TODO: Only for testing purposes
        var gamepad = Gamepad.current;
        if (gamepad.dpad.up.wasPressedThisFrame)
        {
            inventory.Save();
        }
-
        if (gamepad.dpad.down.wasPressedThisFrame)
        {
            inventory.Load();
        }
    }
-
-
+   
+   // Clears the inventory 
    private void OnApplicationQuit()
     {
         inventory.Container.Clear();
