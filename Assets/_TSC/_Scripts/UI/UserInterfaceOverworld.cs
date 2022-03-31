@@ -9,6 +9,9 @@ using UnityEngine.SceneManagement;
 
 public class UserInterfaceOverworld : MonoBehaviour
 {
+    // gives the UI acces to the inventory
+    public InventoryObject inventory;
+    
     [Header("Canvases")] 
     public GameObject canvasPauseMenu;
     public GameObject canvasInventory;
@@ -54,19 +57,16 @@ public class UserInterfaceOverworld : MonoBehaviour
             }
         }
 
-        #region Inventory switching input
-
+        // Inventory switching input
         if (inventoryActive == true)
         {
             if(gamepad.rightShoulder.wasPressedThisFrame || gamepad.leftShoulder.wasPressedThisFrame)
             {
-
-            SwitchInventoryPanels();
+                SwitchInventoryPanels();
             }
         }
-        #endregion
         
-        #region close Inventory with east button
+        // Close Inventory with east button
         if (inventoryActive == true && gamepad.buttonEast.wasPressedThisFrame)
         {
             canvasPauseMenu.SetActive(true);
@@ -76,7 +76,6 @@ public class UserInterfaceOverworld : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(firstButtonPauseMenu);
         }
-        #endregion
     }
 
     #region open/close Pausemenu

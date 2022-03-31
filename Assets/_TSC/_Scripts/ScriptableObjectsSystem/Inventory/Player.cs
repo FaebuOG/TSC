@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
@@ -12,8 +13,7 @@ public class Player : MonoBehaviour
    private void OnTriggerEnter(Collider other)
    {
        var item = other.GetComponent<Item>();
-       
-       
+
        if (item.item.type == ItemType.DefaultCard)
        {
            Debug.Log("DefaultCard");
@@ -30,8 +30,23 @@ public class Player : MonoBehaviour
        }
    }
 
-    private void OnApplicationQuit()
+   private void Update()
+   {
+       var gamepad = Gamepad.current;
+       if (gamepad.dpad.up.wasPressedThisFrame)
+       {
+           inventory.Save();
+       }
+
+       if (gamepad.dpad.down.wasPressedThisFrame)
+       {
+           inventory.Load();
+       }
+   }
+
+
+   private void OnApplicationQuit()
     {
-        //inventory.Container.Clear();
+        inventory.Container.Clear();
     }
 }
