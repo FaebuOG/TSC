@@ -12,7 +12,7 @@ public class InventoryTest : MonoBehaviour
     // Player gets inventory
     public static InventoryTest GetInventory()
     {
-        return FindObjectOfType<TestingPlayer>().GetComponent<InventoryTest>();
+        return FindObjectOfType<ThirdPersonController>().GetComponent<InventoryTest>();
     }
 
     public void AddCard(Cards card, int count)
