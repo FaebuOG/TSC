@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class WayPointGizmos 
 {
+    //made with tutorial of Boundfox Studios
     private static readonly float width = 0.5f;
     private static readonly float halfWidth = width / 2;
     [DrawGizmo(GizmoType.NonSelected|GizmoType.Selected|GizmoType.Pickable,typeof(Waypoint))]
@@ -24,5 +25,12 @@ public class WayPointGizmos
     }
     private static void DrawOrintation(Waypoint waypoint)
     {
+        Gizmos.color = Color.white;
+
+        var transform = waypoint.transform;
+        var offset = transform.forward  * halfWidth;
+        var startPosition = transform.position;
+
+        Gizmos.DrawLine(startPosition-offset,startPosition + offset);
     }
 }
