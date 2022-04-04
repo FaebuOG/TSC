@@ -42,8 +42,28 @@ public class WaypointWindowManager : EditorWindow
     {
         var waypoint = CreateNewWaypoint();
 
+        if (WayPointsRoot.childCount > 1)
+        {
+            waypoint.previousWaypoint = WayPointsRoot.GetChild(waypoint.transform.GetSiblingIndex() - 1).GetComponent<Waypoint>();
+            waypoint.previousWaypoint.nextWaypoint = waypoint;
+
+            OrientWaypoint(waypoint,waypoint.previousWaypoint);
+        }
+
         Selection.activeGameObject = waypoint.gameObject;
 
+    }
+    private void OrientWaypoint(Waypoint waypoint, Waypoint reference) 
+    {
+        if (!reference)
+        {
+            return;
+        }
+
+        var waypointTransform = waypoint.transform;
+        var referenceTransform = reference.transform;
+
+        waypointTransform.SetPositionAndRotation(referenceTransform.position, referenceTransform.rotation);
     }
     private Waypoint CreateNewWaypoint()
     {
