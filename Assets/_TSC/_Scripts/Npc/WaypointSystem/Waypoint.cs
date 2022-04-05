@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour
 {
-    public Waypoint nextWaypoint;
-    public Waypoint previousWaypoint;
+    public Waypoint NextWaypoint;
+    public Waypoint PreviousWaypoint;
 
     // Start is called before the first frame update
     void Start()
