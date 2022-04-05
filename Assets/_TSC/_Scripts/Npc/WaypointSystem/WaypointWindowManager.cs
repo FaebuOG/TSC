@@ -33,9 +33,66 @@ public class WaypointWindowManager : EditorWindow
 
     private void DrawButtons() 
     {
+        if (GUILayout.Button("Rename all Waypoints"))
+        {
+            RenameAllWaypoints();
+
+        }
         if (GUILayout.Button("Create Waypoint"))
         {
             CreateWayPoint();
+        }
+        var selectedWaypoint = GetSelectedWaypoint();
+        GUI.enabled = selectedWaypoint;
+
+        var waypointName = selectedWaypoint ? $"{selectedWaypoint.name}" : string.Empty;
+
+        if (GUILayout.Button($"Create waypoint before{waypointName}"))
+        {
+            CreateWaypointBefore(selectedWaypoint);
+
+        }
+        if (GUILayout.Button($"Create waypoint after{waypointName}"))
+        {
+            CreateWaypointAfter(selectedWaypoint);
+
+        }
+        if (GUILayout.Button($"Delete{selectedWaypoint}"))
+        {
+            DeleteWaypoint(selectedWaypoint);
+
+        }
+    }
+    private void CreateWaypointBefore(Waypoint selectedWaypoint) 
+    { 
+    }
+    private void CreateWaypointAfter(Waypoint selectedWaypoint)
+    {
+    }
+    private void DeleteWaypoint(Waypoint selectedWaypoint)
+    {
+        if (selectedWaypoint.previousWaypoint)
+        {
+            selectedWaypoint.previousWaypoint.nextWaypoint = selectedWaypoint.nextWaypoint;
+
+        }
+        if (selectedWaypoint.nextWaypoint)
+        {
+            selectedWaypoint.nextWaypoint.previousWaypoint = selectedWaypoint.previousWaypoint;
+        }
+        DestroyImmediate(selectedWaypoint.gameObject);
+        RenameAllWaypoints();
+    }
+    private Waypoint GetSelectedWaypoint() 
+    {
+        return Selection.activeGameObject ? Selection.activeGameObject.GetComponent<Waypoint>() : null;
+    }
+    private void RenameAllWaypoints() 
+    {
+        for (int i = 0; i < WayPointsRoot.childCount; i++)
+        {
+            WayPointsRoot.GetChild(i).name = $"Waypoint{i + 1}";
+
         }
     }
     private void CreateWayPoint() 
