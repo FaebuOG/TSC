@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8501044736811151817}
   - component: {fileID: 8501044736811151819}
   - component: {fileID: 8501044736811151816}
+  - component: {fileID: 7626938936405164610}
   m_Layer: 0
   m_Name: Item_Money10
   m_TagString: Untagged
@@ -25,9 +26,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8501044736811151822}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 111.66, y: 2.67, z: 73.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8501044735563761504}
   m_Father: {fileID: 0}
@@ -59,6 +61,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 9ae112c3838da78408a5b67cbbf6c0ce, type: 2}
+  defaultCard: {fileID: 0}
+  specialCard: {fileID: 0}
+--- !u!114 &7626938936405164610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8501044736811151822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfcc9ceea0bf419cb3bcaf548c2600d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveLayer: 1
+  saveTag: 1
+  saveName: 1
+  saveHideFlags: 1
+  saveActive: 1
+  saveChildren: 0
+  componentsToSave:
+  - {fileID: 8501044736811151817}
+  - {fileID: 8501044736811151819}
+  - {fileID: 8501044736811151816}
 --- !u!1001 &8501044735563835690
 PrefabInstance:
   m_ObjectHideFlags: 0
