@@ -701,6 +701,7 @@ GameObject:
   - component: {fileID: 829399328390814719}
   - component: {fileID: 4516542277175511490}
   - component: {fileID: 6719310729231487366}
+  - component: {fileID: 851908491}
   m_Layer: 0
   m_Name: Character_English_Captain_01
   m_TagString: Untagged
@@ -751,7 +752,7 @@ Animator:
   m_GameObject: {fileID: 111782}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 409520c9226982345a49c9803624f208, type: 3}
-  m_Controller: {fileID: 9100000, guid: 8ba75ce7454aace438ddb66b8f8c9953, type: 2}
+  m_Controller: {fileID: 9100000, guid: b585608fbdbad51489c49800fba41f60, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -806,13 +807,11 @@ MonoBehaviour:
   PlayerInventory: {fileID: 11400000, guid: 93450d04aa3e9bc418a87be9fa407fca, type: 2}
   x_Text: {fileID: 1002813276}
   dialogue:
-    name: Henry Smith
+    name: Yolanda West
     sentences:
-    - Hello little boy
-    - 'Do you think you can beat me?
-
-'
-  NpcType: 1
+    - I'm so in love with this place
+    - A lot of young trainers come here to collect wood for their poles.
+  NpcType: 0
   dialogueState: 0
   IsTalking: 0
 --- !u!136 &3592509115747274343
@@ -870,6 +869,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nPCInventory: {fileID: 11400000, guid: 7bcbcf54c03e35544a94112096f5b610, type: 2}
+--- !u!114 &851908491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfcc9ceea0bf419cb3bcaf548c2600d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveLayer: 1
+  saveTag: 1
+  saveName: 1
+  saveHideFlags: 1
+  saveActive: 1
+  saveChildren: 0
+  componentsToSave:
+  - {fileID: 6719310729231487366}
+  - {fileID: 4516542277175511490}
+  - {fileID: 829399328390814719}
+  - {fileID: 3592509115747274343}
+  - {fileID: 2022661700}
+  - {fileID: 2022661697}
+  - {fileID: 2022661699}
+  - {fileID: 9521642}
+  - {fileID: 411188}
 --- !u!1 &111866
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,7 +913,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &433368
 Transform:
   m_ObjectHideFlags: 0
@@ -1580,7 +1607,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &445548
 Transform:
   m_ObjectHideFlags: 0
@@ -2266,7 +2293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &437174
 Transform:
   m_ObjectHideFlags: 0
@@ -3111,7 +3138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &404746
 Transform:
   m_ObjectHideFlags: 0
@@ -3194,7 +3221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &486038
 Transform:
   m_ObjectHideFlags: 0

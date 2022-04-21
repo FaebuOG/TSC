@@ -12,29 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d9c2c88650917a4eac4a900b9d7d173, type: 3}
   m_Name: playerInventory
   m_EditorClassIdentifier: 
-  money: 0
+  money: 50
   wood: 0
   savePath: /Inventory.Save
   ItemContainer: []
   DefaultCardContainer:
   - ID: 1
-    DefaultCard: {fileID: 0}
+    DefaultCard: {fileID: 11400000, guid: f2ce3c0b27ef1f44683c28188dd8faef, type: 2}
     Amount: 1
   - ID: 1
-    DefaultCard: {fileID: 4300000, guid: 3cb6fa7058029d94c894fddffd1c1479, type: 3}
+    DefaultCard: {fileID: 11400000, guid: 9d337eb2b2be42040b3d60cfb1cca9e6, type: 2}
     Amount: 1
   - ID: 1
-    DefaultCard: {fileID: 3, guid: 760755dd25f4e264a8d4fdb58310cd83, type: 3}
+    DefaultCard: {fileID: 11400000, guid: bf26ef2f1b5fb64469ff7e45b711591f, type: 2}
     Amount: 1
   - ID: 1
-    DefaultCard: {fileID: 0}
+    DefaultCard: {fileID: 11400000, guid: 590bbb8d9a4c4064f8af0c8f58f9d070, type: 2}
     Amount: 1
   AbilityCardContainer:
   - ID: 0
-    SpecialCard: {fileID: 0}
+    SpecialCard: {fileID: 11400000, guid: c6f2cd1be1d5a204bbd847551c130cfc, type: 2}
     Amount: 0
   - ID: 0
-    SpecialCard: {fileID: 0}
+    SpecialCard: {fileID: 11400000, guid: a776f5fc0ffd39f4ab114483ba734a55, type: 2}
     Amount: 0
   - ID: 0
     SpecialCard: {fileID: 0}
@@ -43,7 +43,7 @@ MonoBehaviour:
     SpecialCard: {fileID: 0}
     Amount: 0
   PlayerDefaultCardLineUp:
-  - {fileID: 3, guid: 760755dd25f4e264a8d4fdb58310cd83, type: 3}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
