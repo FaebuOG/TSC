@@ -18,7 +18,7 @@ MonoBehaviour:
   Name: Captain Swordfish
   Level: 1
   MaxHealth: 100
-  Health: 100
+  Health: 50
   Attack: 50
   CardArtwork: {fileID: 21300000, guid: e31ee7b8406e92b4f8a41185bdc22f98, type: 3}
   NextLevelCard: {fileID: 11400000, guid: 132f68e6187298e4ba9a804ea9a1badd, type: 2}
