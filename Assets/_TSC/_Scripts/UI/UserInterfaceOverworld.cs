@@ -183,6 +183,7 @@ public class UserInterfaceOverworld : MonoBehaviour
     #endregion
 
     #region openInventory
+    [SerializeField] InventoryUI inventoryUI;
 
     public void openInventory()
     {
@@ -192,6 +193,7 @@ public class UserInterfaceOverworld : MonoBehaviour
 
         inventoryActive = true;
         EventSystem.current.SetSelectedGameObject(firstButtonInventory);
+        inventoryUI.UpdatePoleCardList();
     }
     #endregion
     

@@ -8,19 +8,16 @@ public class SaveOverworld : MonoBehaviour
 
     private void Start()
     {
-        //LoadGame();
+        LoadGame();
     }
 
     public void SaveGame()
     {
-        ES3.Save("inventory", Player.GetComponent<Player>().inventory);
-
-        ES3.Save("playerTransform", Player.transform);
+        ES3AutoSaveMgr.Current.Save();
     }
 
     public void LoadGame()
     {
-        Player.GetComponent<Player>().inventory = ES3.Load<InventoryObject>("inventory");
-        ES3.LoadInto("playerTransfom", Player.transform);
+        ES3AutoSaveMgr.Current.Load();
     }
 }

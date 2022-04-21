@@ -76,7 +76,7 @@ public class InventoryUI : MonoBehaviour
             sliderCrew3Card.value = inventory.PlayerDefaultCardLineUp[3].Health / inventory.PlayerDefaultCardLineUp[3].MaxHealth;
     }
 
-    void UpdatePoleCardList()
+    public void UpdatePoleCardList()
     {
         //Clear all existing items
         foreach (Transform child in cardPolePage1.transform)
