@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_TSC/_Scenes/Training Center.unity
     guid: 2f5673346b0ae3744a156b98b7d69f7e
+  - enabled: 1
+    path: Assets/_TSC/_Scenes/Soccerfield 1.unity
+    guid: 4c61c5a8f8813974fb0cdc6c7e9d93e0
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: c669e8e71df9185428858d143c1c4773, type: 2}
