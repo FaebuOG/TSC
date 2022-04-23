@@ -59,11 +59,13 @@ public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
                 LineUpController.CantEquip = false;
                 PlayerDefaultCardLineUp[LineUpController.ActivePole] = LineUpController.ActiveCard.DefaultCardSlot; // Save the selected Card to the local Line Up Array (to display in inv)
                 InventoryUI.Instance.UpdateLineUpCards();
+                UISoundeffects.Instance.CardSelectSound();
             }
             else
             {
                 LineUpController.CantEquip = true;
                 Debug.Log("Card already equiped");
+                UISoundeffects.Instance.SelectionFailedSound();
             }
         }
         else
