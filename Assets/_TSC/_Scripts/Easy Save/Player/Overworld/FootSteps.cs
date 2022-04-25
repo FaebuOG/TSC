@@ -4,7 +4,9 @@ public class FootSteps : MonoBehaviour
 {
     [SerializeField]
     private AudioClip[] clips;
-    
+    [SerializeField]
+    private AudioClip[] clips2;
+
 
     private AudioSource audioSource;
    
