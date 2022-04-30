@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 using System.Collections;
 using TMPro;
 
+public enum LastPlayerHit { Default, Player, AI }
 public class BallManager : MonoBehaviour
 {
     public static BallManager Instance;
@@ -97,4 +98,77 @@ public class BallManager : MonoBehaviour
             aiController.currentPoleIndexAI = 3;
         }
     }
+
+    #region Damage to poles
+
+    public PoleHealth PoleHealth;
+    
+    public LastPlayerHit LastPlayerHit;
+
+    void DealDamage(GameObject other)
+    {
+        switch (LastPlayerHit)
+        {
+            case LastPlayerHit.Default:
+                break;
+            case LastPlayerHit.Player:
+                if (other.CompareTag("AIMain"))
+                {
+                    PoleHealth.AIHealthMain -= Mathf.Round(GetComponent<Rigidbody>().velocity.magnitude);
+                    Debug.Log(GetComponent<Rigidbody>().velocity.magnitude);
+                }
+                else if (other.CompareTag("AICrew1"))
+                {
+                    PoleHealth.AIHealthCrew1 -= Mathf.Round(GetComponent<Rigidbody>().velocity.magnitude);
+                    Debug.Log(GetComponent<Rigidbody>().velocity.magnitude);
+                }
+                else if (other.CompareTag("AICrew2"))
+                {
+                    PoleHealth.AIHealthCrew2 -= Mathf.Round(GetComponent<Rigidbody>().velocity.magnitude);
+                    Debug.Log(GetComponent<Rigidbody>().velocity.magnitude);
+                }
+                else if (other.CompareTag("AICrew3"))
+                {
+                    PoleHealth.AIHealthCrew3 -= Mathf.Round(GetComponent<Rigidbody>().velocity.magnitude);
+                    Debug.Log(GetComponent<Rigidbody>().velocity.magnitude);
+                }
+                break;
+            case LastPlayerHit.AI:
+                if (other.CompareTag("PlayerMain"))
+                {
+                    PoleHealth.PlayerHealthMain -= Mathf.Round(GetComponent<Rigidbody>().velocity.magnitude);
+                    Debug.Log(GetComponent<Rigidbody>().velocity.magnitude);
+                }
+                else if (other.CompareTag("PlayerCrew1"))
+                {
+                    PoleHealth.PlayerHealthCrew1 -= Mathf.Round(GetComponent<Rigidbody>().velocity.magnitude);
+                    Debug.Log(GetComponent<Rigidbody>().velocity.magnitude);
+                }
+                else if (other.CompareTag("PlayerCrew2"))
+                {
+                    PoleHealth.PlayerHealthCrew2 -= Mathf.Round(GetComponent<Rigidbody>().velocity.magnitude);
+                    Debug.Log(GetComponent<Rigidbody>().velocity.magnitude);
+                }
+                else if (other.CompareTag("PlayerCrew3"))
+                {
+                    PoleHealth.PlayerHealthCrew3 -= Mathf.Round(GetComponent<Rigidbody>().velocity.magnitude);
+                    Debug.Log(GetComponent<Rigidbody>().velocity.magnitude);
+                }
+                break;
+            default:
+                break;
+        }
+        
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        DealDamage(collision.gameObject);
+        if (collision.gameObject.CompareTag("PlayerMain") || collision.gameObject.CompareTag("PlayerCrew1") || collision.gameObject.CompareTag("PlayerCrew2") || collision.gameObject.CompareTag("PlayerCrew3"))
+            LastPlayerHit = LastPlayerHit.Player;
+        else if (collision.gameObject.CompareTag("AIMain") || collision.gameObject.CompareTag("AICrew1") || collision.gameObject.CompareTag("AICrew2") || collision.gameObject.CompareTag("AICrew3"))
+            LastPlayerHit = LastPlayerHit.AI;
+    }
+
+    #endregion
 }

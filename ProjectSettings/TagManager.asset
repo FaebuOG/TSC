@@ -20,6 +20,14 @@ TagManager:
   - Powerfield Blue
   - Powerfield Red
   - NPC
+  - PlayerMain
+  - PlayerCrew1
+  - PlayerCrew2
+  - PlayerCrew3
+  - AIMain
+  - AICrew1
+  - AICrew2
+  - AICrew3
   layers:
   - Default
   - TransparentFX

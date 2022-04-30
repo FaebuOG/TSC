@@ -787,7 +787,7 @@ GameObject:
   - component: {fileID: 53405363}
   m_Layer: 0
   m_Name: CrewPole2
-  m_TagString: Poles
+  m_TagString: AICrew2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1116,7 +1116,7 @@ GameObject:
   - component: {fileID: 71423549}
   m_Layer: 0
   m_Name: pos7
-  m_TagString: SoccerPlayer
+  m_TagString: AICrew2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4356,7 +4356,7 @@ GameObject:
   - component: {fileID: 329394679}
   m_Layer: 0
   m_Name: pos3
-  m_TagString: SoccerPlayer
+  m_TagString: AICrew1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6523,27 +6523,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c4d08fc886be15498da6722faec2887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerHealthMain: 0
   HealthBarPlayerMain: {fileID: 318756198}
   TextCurrentHealthPlayerMain: {fileID: 1441763295}
   TextMaxHealthPlayerMain: {fileID: 1337044268}
+  PlayerHealthCrew1: 0
   HealthBarPlayerCrew1: {fileID: 891685375}
   TextCurrentHealthPlayerCrew1: {fileID: 1441763295}
   TextMaxHealthPlayerCrew1: {fileID: 1337044268}
+  PlayerHealthCrew2: 0
   HealthBarPlayerCrew2: {fileID: 2145490610}
   TextCurrentHealthPlayerCrew2: {fileID: 1320393509}
   TextMaxHealthPlayerCrew2: {fileID: 614525183}
+  PlayerHealthCrew3: 0
   HealthBarPlayerCrew3: {fileID: 1761507572}
   TextCurrentHealthPlayerCrew3: {fileID: 1068398497}
   TextMaxHealthPlayerCrew3: {fileID: 1542981717}
+  AIHealthMain: 0
   HealthBarAIMain: {fileID: 451264375}
   TextCurrentHealthAIMain: {fileID: 791404493}
   TextMaxHealthAIMain: {fileID: 884231448}
+  AIHealthCrew1: 0
   HealthBarAICrew1: {fileID: 1926485595}
   TextCurrentHealthAICrew1: {fileID: 1673837731}
   TextMaxHealthAICrew1: {fileID: 235186130}
+  AIHealthCrew2: 0
   HealthBarAICrew2: {fileID: 890776842}
   TextCurrentHealthAICrew2: {fileID: 1459465042}
   TextMaxHealthAICrew2: {fileID: 1195249438}
+  AIHealthCrew3: 0
   HealthBarAICrew3: {fileID: 440349848}
   TextCurrentHealthAICrew3: {fileID: 280607931}
   TextMaxHealthAICrew3: {fileID: 1320989457}
@@ -6748,7 +6756,7 @@ GameObject:
   - component: {fileID: 442623273}
   m_Layer: 0
   m_Name: pos4
-  m_TagString: SoccerPlayer
+  m_TagString: AICrew2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10559,7 +10567,7 @@ GameObject:
   - component: {fileID: 631305328}
   m_Layer: 0
   m_Name: MainPole
-  m_TagString: Poles
+  m_TagString: AIMain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10828,7 +10836,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 662104799}
-  m_LocalRotation: {x: -1.8718162e-16, y: 0.971712, z: 0.2361692, w: -4.478011e-16}
+  m_LocalRotation: {x: -0.0000000078691595, y: 0.971712, z: 0.23616919, w: 0.000000032377454}
   m_LocalPosition: {x: -0.3456396, y: -0.71089655, z: -0.60442114}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -12232,7 +12240,7 @@ GameObject:
   - component: {fileID: 778915225}
   m_Layer: 0
   m_Name: pos8
-  m_TagString: SoccerPlayer
+  m_TagString: AICrew2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12784,7 +12792,7 @@ GameObject:
   - component: {fileID: 813096767}
   m_Layer: 0
   m_Name: pos9
-  m_TagString: SoccerPlayer
+  m_TagString: AICrew3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13967,7 +13975,7 @@ GameObject:
   - component: {fileID: 892774340}
   m_Layer: 0
   m_Name: pos1
-  m_TagString: SoccerPlayer
+  m_TagString: AIMain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15409,7 +15417,7 @@ GameObject:
   - component: {fileID: 1001695006}
   m_Layer: 0
   m_Name: pos5
-  m_TagString: SoccerPlayer
+  m_TagString: AICrew2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16847,7 +16855,7 @@ GameObject:
   - component: {fileID: 1087741151}
   m_Layer: 0
   m_Name: CrewPole1
-  m_TagString: Poles
+  m_TagString: AICrew1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19227,6 +19235,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 1222df06735cc6d45b71a2b3ab3128f3, type: 3}
     - target: {fileID: 634203762722141515, guid: 5fa93c729256be44194255bc2d46cffa, type: 3}
+      propertyPath: PoleHealth
+      value: 
+      objectReference: {fileID: 437777368}
+    - target: {fileID: 634203762722141515, guid: 5fa93c729256be44194255bc2d46cffa, type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1001867388}
@@ -20767,7 +20779,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 37.199997}
+  m_AnchoredPosition: {x: 0, y: 37.19995}
   m_SizeDelta: {x: 820, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1420465357
@@ -22772,7 +22784,7 @@ GameObject:
   - component: {fileID: 1503645761}
   m_Layer: 0
   m_Name: pos2
-  m_TagString: SoccerPlayer
+  m_TagString: AICrew1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24179,7 +24191,7 @@ GameObject:
   - component: {fileID: 1596763137}
   m_Layer: 0
   m_Name: CrewPole3
-  m_TagString: Poles
+  m_TagString: AICrew3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27806,7 +27818,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 180, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -37.2}
+  m_AnchoredPosition: {x: 0, y: -37.19995}
   m_SizeDelta: {x: 820, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1817251005
@@ -28165,7 +28177,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8805395, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -28181,7 +28193,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841743767}
-  m_LocalRotation: {x: -1.8718162e-16, y: 0.971712, z: 0.2361692, w: -4.478011e-16}
+  m_LocalRotation: {x: -0.0000000078691595, y: 0.971712, z: 0.23616919, w: 0.000000032377454}
   m_LocalPosition: {x: -0.3456396, y: -0.71089655, z: -0.60442114}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -28709,7 +28721,7 @@ GameObject:
   - component: {fileID: 1883878622}
   m_Layer: 0
   m_Name: pos11
-  m_TagString: SoccerPlayer
+  m_TagString: AICrew3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32755,7 +32767,7 @@ GameObject:
   - component: {fileID: 2103337906}
   m_Layer: 0
   m_Name: pos6
-  m_TagString: SoccerPlayer
+  m_TagString: AICrew2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32936,7 +32948,7 @@ GameObject:
   - component: {fileID: 2108386392}
   m_Layer: 0
   m_Name: pos10
-  m_TagString: SoccerPlayer
+  m_TagString: AICrew3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34307,7 +34319,7 @@ GameObject:
   - component: {fileID: 1979058432}
   m_Layer: 8
   m_Name: pos4
-  m_TagString: Untagged
+  m_TagString: AICrew2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34327,7 +34339,7 @@ GameObject:
   - component: {fileID: 1068358110}
   m_Layer: 8
   m_Name: pos6
-  m_TagString: Untagged
+  m_TagString: AICrew2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34347,7 +34359,7 @@ GameObject:
   - component: {fileID: 1860645456}
   m_Layer: 8
   m_Name: pos5
-  m_TagString: Untagged
+  m_TagString: AICrew2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34368,7 +34380,7 @@ GameObject:
   - component: {fileID: 857028774}
   m_Layer: 0
   m_Name: CrewPole2AI
-  m_TagString: Untagged
+  m_TagString: AICrew2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34388,7 +34400,7 @@ GameObject:
   - component: {fileID: 210168135}
   m_Layer: 8
   m_Name: pos11
-  m_TagString: Untagged
+  m_TagString: AICrew3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34408,7 +34420,7 @@ GameObject:
   - component: {fileID: 27106500}
   m_Layer: 8
   m_Name: pos8
-  m_TagString: Untagged
+  m_TagString: AICrew2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34428,7 +34440,7 @@ GameObject:
   - component: {fileID: 431420717}
   m_Layer: 8
   m_Name: pos9
-  m_TagString: Untagged
+  m_TagString: AICrew3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34448,7 +34460,7 @@ GameObject:
   - component: {fileID: 742522502}
   m_Layer: 8
   m_Name: pos1
-  m_TagString: Untagged
+  m_TagString: AIMain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34468,7 +34480,7 @@ GameObject:
   - component: {fileID: 81922932}
   m_Layer: 8
   m_Name: pos3
-  m_TagString: Untagged
+  m_TagString: AICrew1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34488,7 +34500,7 @@ GameObject:
   - component: {fileID: 1048152690}
   m_Layer: 8
   m_Name: pos10
-  m_TagString: Untagged
+  m_TagString: AICrew3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34510,7 +34522,7 @@ GameObject:
   - component: {fileID: 3469287836832917419}
   m_Layer: 0
   m_Name: MainPoleAI
-  m_TagString: Untagged
+  m_TagString: AIMain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34531,7 +34543,7 @@ GameObject:
   - component: {fileID: 709125712}
   m_Layer: 0
   m_Name: CrewPole3AI
-  m_TagString: Untagged
+  m_TagString: AICrew3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34551,7 +34563,7 @@ GameObject:
   - component: {fileID: 1049520594}
   m_Layer: 8
   m_Name: pos2
-  m_TagString: Untagged
+  m_TagString: AICrew1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34571,7 +34583,7 @@ GameObject:
   - component: {fileID: 188742344}
   m_Layer: 8
   m_Name: pos7
-  m_TagString: Untagged
+  m_TagString: AICrew2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34592,7 +34604,7 @@ GameObject:
   - component: {fileID: 1137467385}
   m_Layer: 0
   m_Name: CrewPole1AI
-  m_TagString: Untagged
+  m_TagString: AICrew1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36452,7 +36464,7 @@ GameObject:
   - component: {fileID: 6993379039651568965}
   m_Layer: 0
   m_Name: pos9
-  m_TagString: SoccerPlayer
+  m_TagString: PlayerCrew3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36471,7 +36483,7 @@ GameObject:
   - component: {fileID: 7525578558336090750}
   m_Layer: 0
   m_Name: pos10
-  m_TagString: SoccerPlayer
+  m_TagString: PlayerCrew3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36492,7 +36504,7 @@ GameObject:
   - component: {fileID: 3404912865387980111}
   m_Layer: 0
   m_Name: MainPole
-  m_TagString: Poles
+  m_TagString: PlayerMain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36511,7 +36523,7 @@ GameObject:
   - component: {fileID: 5958064364854777074}
   m_Layer: 0
   m_Name: pos1
-  m_TagString: SoccerPlayer
+  m_TagString: PlayerMain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36530,7 +36542,7 @@ GameObject:
   - component: {fileID: 7580763062387413087}
   m_Layer: 0
   m_Name: pos4
-  m_TagString: SoccerPlayer
+  m_TagString: PlayerCrew2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36549,7 +36561,7 @@ GameObject:
   - component: {fileID: 2105206190838479170}
   m_Layer: 0
   m_Name: pos2
-  m_TagString: SoccerPlayer
+  m_TagString: PlayerCrew1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36568,7 +36580,7 @@ GameObject:
   - component: {fileID: 2972461900741284215}
   m_Layer: 0
   m_Name: pos8
-  m_TagString: SoccerPlayer
+  m_TagString: PlayerCrew2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36587,7 +36599,7 @@ GameObject:
   - component: {fileID: 3333653306973688115}
   m_Layer: 0
   m_Name: pos7
-  m_TagString: SoccerPlayer
+  m_TagString: PlayerCrew2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36606,7 +36618,7 @@ GameObject:
   - component: {fileID: 3538442427253395497}
   m_Layer: 0
   m_Name: pos6
-  m_TagString: SoccerPlayer
+  m_TagString: PlayerCrew2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36625,7 +36637,7 @@ GameObject:
   - component: {fileID: 1360020631373892067}
   m_Layer: 0
   m_Name: pos5
-  m_TagString: SoccerPlayer
+  m_TagString: PlayerCrew2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36644,7 +36656,7 @@ GameObject:
   - component: {fileID: 1198955766155494895}
   m_Layer: 0
   m_Name: pos3
-  m_TagString: SoccerPlayer
+  m_TagString: PlayerCrew1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36665,7 +36677,7 @@ GameObject:
   - component: {fileID: 3748424725517748101}
   m_Layer: 0
   m_Name: CrewPole1
-  m_TagString: Poles
+  m_TagString: PlayerCrew1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36684,7 +36696,7 @@ GameObject:
   - component: {fileID: 7749304722093342723}
   m_Layer: 0
   m_Name: pos11
-  m_TagString: SoccerPlayer
+  m_TagString: PlayerCrew3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36705,7 +36717,7 @@ GameObject:
   - component: {fileID: 6117699324203261312}
   m_Layer: 0
   m_Name: CrewPole3
-  m_TagString: Poles
+  m_TagString: PlayerCrew3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36726,7 +36738,7 @@ GameObject:
   - component: {fileID: 3696297413138101627}
   m_Layer: 0
   m_Name: CrewPole2
-  m_TagString: Poles
+  m_TagString: PlayerCrew2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
