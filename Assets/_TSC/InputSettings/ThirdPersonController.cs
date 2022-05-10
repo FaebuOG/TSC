@@ -15,8 +15,6 @@ public class ThirdPersonController : MonoBehaviour
     [SerializeField]
     private float movementForce = 1f;
     [SerializeField]
-    private float jumpForce = 5f;
-    [SerializeField]
     private float maxSpeed = 3.5f;
     private Vector3 forceDirection = Vector3.zero;
 
@@ -27,11 +25,9 @@ public class ThirdPersonController : MonoBehaviour
 
     private void Awake()
     {
-        //
         rb = this.GetComponent<Rigidbody>();
         playerActionsAsset = new ThirdPersonActionsAsset();
         animator = this.GetComponent<Animator>();
-        
         // Pause logic
         GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
     }
@@ -40,18 +36,14 @@ public class ThirdPersonController : MonoBehaviour
     {
         GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
     }
-
     private void OnEnable()
     {
-        //playerActionsAsset.OverWorldPlayer.Jump.started += DoJump;
         playerActionsAsset.OverWorldPlayer.Attack.started += DoAttack;
         move = playerActionsAsset.OverWorldPlayer.Move;
         playerActionsAsset.OverWorldPlayer.Enable();
     }
-
     private void OnDisable()
     {
-        //playerActionsAsset.OverWorldPlayer.Jump.started -= DoJump;
         playerActionsAsset.OverWorldPlayer.Attack.started -= DoAttack;
         playerActionsAsset.OverWorldPlayer.Disable();
     }
@@ -100,14 +92,6 @@ public class ThirdPersonController : MonoBehaviour
         return right.normalized;
     }
 
-    /*private void DoJump(InputAction.CallbackContext obj)
-    {
-        if(IsGrounded())
-        {
-            forceDirection += Vector3.up * jumpForce;
-        }
-    }*/
-
     //Creates a sphere and checks for ground
     private bool IsGrounded()
     {
@@ -117,7 +101,7 @@ public class ThirdPersonController : MonoBehaviour
         else
             return false; 
     }
-
+    //sets animators trigger to attack
     private void DoAttack(InputAction.CallbackContext obj)
     {
         animator.SetTrigger("attack");
