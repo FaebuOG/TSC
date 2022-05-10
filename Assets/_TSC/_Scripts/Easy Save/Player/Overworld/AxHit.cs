@@ -6,69 +6,61 @@ public class AxHit : MonoBehaviour
     //Array of clips
     [SerializeField]
     private AudioClip[] clips;
+    private AudioSource audioSource;
     //the gameobject to deactivate
     public GameObject objectToDeactivate;
 
-    private AudioSource audioSource;
-    private bool actionTriggert;
+    
+    private bool isvisible;
 
     //links to the Component AudioSource
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
-
     }
 
+    // Update is called once per frame
     private void Update()
     {
-
-
         //if Event PreAxHit has happed then the selected Object will be activated
-        if (actionTriggert == true)
+        if (isvisible == true)
         {
             objectToDeactivate.SetActive(true);
         }
         //if Event AfterAxHit has happed then the selected Object will be deactivated
-        if (actionTriggert == false)
+        if (isvisible == false)
         {
             objectToDeactivate.SetActive(false);
         }
-
-
     }
-
     /*private bool NewEvent()
     {
         Debug.Log("New event");
         return actionTriggert = true;
     }*/
+    //retruns the bool of the visibility of the object to true
     private bool PreAxHit()
-    {
+    {   
         Debug.Log("PreAxHit");
-        return actionTriggert = true;
+        return isvisible = true;
     }
-
-
-
-    //Method uses random AudioClip and play it. bool set to true.
+    //Gets random AudioClip and plays it
     private void Hit()
     {
         Debug.Log("Hit");
         AudioClip clip = GetRandomClip();
         audioSource.PlayOneShot(clip);
-
     }
-
+    //retruns the bool of the visibility of the object to false
     private bool AfterAxHit()
     {
         Debug.Log("AfterAxHit");
-        return actionTriggert = false;
+        return isvisible = false;
     }
 
-    //returns a random clip from the total soundlibary array
+    //returns a random AudioClip from the total soundlibary array
     private AudioClip GetRandomClip()
     {
         return clips[UnityEngine.Random.Range(0, clips.Length)];
-
     }
 }
