@@ -2,7 +2,7 @@
 
 public class FootSteps : MonoBehaviour
 {
-    //Array of clips
+    //Footsteps Audio fields
     [SerializeField]
     private AudioClip[] clips;
     private AudioSource audioSource;
@@ -12,13 +12,13 @@ public class FootSteps : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
     }
+
     //Gets random AudioClip and plays it
     private void Step()
     {
         AudioClip clip = GetRandomClip();
         audioSource.PlayOneShot(clip);
     }
-
     //returns a random AudioClip from the total soundlibary array
     private AudioClip GetRandomClip()
     {

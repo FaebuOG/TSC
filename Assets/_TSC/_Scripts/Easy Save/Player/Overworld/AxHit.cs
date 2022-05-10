@@ -3,14 +3,13 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class AxHit : MonoBehaviour
 {
-    //Array of clips
+    //Axe Audio fields
     [SerializeField]
     private AudioClip[] clips;
     private AudioSource audioSource;
-    //the gameobject to deactivate
-    public GameObject objectToDeactivate;
 
-    
+    //Axe fields
+    public GameObject objectToDeactivate;
     private bool isvisible;
 
     //links to the Component AudioSource
@@ -33,6 +32,7 @@ public class AxHit : MonoBehaviour
             objectToDeactivate.SetActive(false);
         }
     }
+
     /*private bool NewEvent()
     {
         Debug.Log("New event");

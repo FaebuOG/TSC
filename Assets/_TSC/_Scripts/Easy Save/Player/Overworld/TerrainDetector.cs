@@ -2,20 +2,20 @@
 
 public class TerrainDetector
 {
-    private TerrainData terrainData;
+    private TerrainData terrainInfo;
     private int alphamapWidth;
     private int alphamapHeight;
     private float[,,] splatmapData;
-    private int numTextures;
+    private int nummerTextures;
 
     public TerrainDetector()
     {
-        terrainData = Terrain.activeTerrain.terrainData;
-        alphamapWidth = terrainData.alphamapWidth;
-        alphamapHeight = terrainData.alphamapHeight;
+        terrainInfo = Terrain.activeTerrain.terrainData;
+        alphamapWidth = terrainInfo.alphamapWidth;
+        alphamapHeight = terrainInfo.alphamapHeight;
 
-        splatmapData = terrainData.GetAlphamaps(0, 0, alphamapWidth, alphamapHeight);
-        numTextures = splatmapData.Length / (alphamapWidth * alphamapHeight);
+        splatmapData = terrainInfo.GetAlphamaps(0, 0, alphamapWidth, alphamapHeight);
+        nummerTextures = splatmapData.Length / (alphamapWidth * alphamapHeight);
     }
 
     private Vector3 ConvertToSplatMapCoordinate(Vector3 worldPosition)
@@ -34,7 +34,7 @@ public class TerrainDetector
         int activeTerrainIndex = 0;
         float largestOpacity = 0f;
 
-        for (int i = 0; i < numTextures; i++)
+        for (int i = 0; i < nummerTextures; i++)
         {
             if (largestOpacity < splatmapData[(int)terrainCord.z, (int)terrainCord.x, i])
             {
